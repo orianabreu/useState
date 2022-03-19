@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "../Button/Button";
 
 export default function ComplexFormMultipleState() {
   const [name, setName] = useState("");
@@ -36,7 +37,7 @@ export default function ComplexFormMultipleState() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <button>registrarse</button>
+      <Button className="btn registro">registrarse</Button>
     </form>
   );
 }

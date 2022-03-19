@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "../Button/Button";
 
 export default function Counter() {
   //siempre debemos utilizar los hooks en el top del componente
@@ -37,10 +38,12 @@ export default function Counter() {
     <div className='counter-container'>
       <h1>Contador:</h1>
       <h2>{count}</h2>
-      <button onClick={increase}>+</button>
-      <button onClick={decrease}>-</button>
-      <button onClick={reset}>reset</button>
-      <button onClick={addFive}>cinco</button>
+      {/*agrego clase btn (estilos base del comp Button) y 
+      clase con estilos propios para cada butón*/}
+      <Button onClick={increase} className="btn increase">+</Button>
+      <Button onClick={decrease} className="btn decrease">-</Button>
+      <Button onClick={reset} className="btn reset">reset</Button>
+      <Button onClick={addFive} className="btn five">cinco</Button>
     </div>
   );
 }

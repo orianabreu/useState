@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 export default function ComplexForm() {
+  //la función del state debe devolver el mismo tipo de dato que le estamos pasando como
+  //valor inicial. String -> string. Objeto -> objeto........
   const [user, setUser] = useState({
     firstName: "",
     lastName: "",
@@ -17,6 +19,7 @@ export default function ComplexForm() {
     const { name, value } = e.target;
 
     setUser((valorPrevio) => ({
+      //valorPrevio es el objeto user
         ...valorPrevio,
         [name]: value,
         //console.log(prevValue);
